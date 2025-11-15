@@ -1,0 +1,7 @@
+{
+  "name": "Gemini Chat UI",
+  "description": "A modern, responsive chat application interface modeled after Gemini, allowing users to interact with Google's Gemini AI for text and image-based conversations.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
