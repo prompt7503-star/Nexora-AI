@@ -1,7 +1,18 @@
 
+// FIX: Define the AIStudio interface to resolve type conflicts with global declarations.
+interface AIStudio {
+  hasSelectedApiKey: () => Promise<boolean>;
+  openSelectKey: () => Promise<void>;
+}
 
-
-
+declare global {
+  interface Window {
+    aistudio: AIStudio;
+    webkitAudioContext: typeof AudioContext;
+    SpeechRecognition: any;
+    webkitSpeechRecognition: any;
+  }
+}
 
 import React, { useState, useRef, useEffect, FormEvent } from "react";
 import ReactDOM from "react-dom/client";
@@ -1413,7 +1424,7 @@ const AIAnimatedLogoDesignerView: React.FC = () => {
                 prompt: detailedPrompt,
                 config: {
                     numberOfImages: 1,
-                    aspectRatio: aspectRatio as "1:1" | "3:4" | "4:3" | "9:16" | "9:16",
+                    aspectRatio: aspectRatio as "1:1" | "3:4" | "4:3" | "16:9" | "9:16",
                 },
             });
 

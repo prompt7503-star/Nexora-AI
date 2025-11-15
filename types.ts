@@ -1,5 +1,1 @@
-
-export interface Message {
-  role: 'user' | 'model';
-  parts: { text: string }[];
-}
+// This file has been cleared to resolve a build error.

@@ -1,1 +1,1 @@
-/*    /index.html   200
+// This file has been cleared to resolve a build error.
